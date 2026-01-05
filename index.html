@@ -2,37 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Source Bazaar | Online Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxStock - E-commerce Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-store"></i> MaxStock</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#cart">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h1>Source Bazaar</h1>
-    <p>Quality Watches & Leather Products</p>
-    <p class="urdu">اعلیٰ معیار کی مصنوعات – واٹس ایپ پر آرڈر کریں</p>
-</header>
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to MaxStock</h2>
+            <p>Your one-stop shop for quality products</p>
+        </div>
+    </section>
 
-<nav>
-    <button onclick="filterCategory('all')">All</button>
-    <button onclick="filterCategory('watch')">Watches</button>
-    <button onclick="filterCategory('leather')">Leather</button>
-</nav>
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
 
-<section class="products" id="productList"></section>
+    <section id="categories">
+        <div class="container">
+            <h2>Categories</h2>
+            <div class="category-grid" id="category-grid">
+                <!-- Categories will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
 
-<section class="cart">
-    <h2>🛒 Your Cart</h2>
-    <ul id="cartItems"></ul>
-    <p id="total"></p>
-    <button class="checkout" onclick="checkout()">Order on WhatsApp</button>
-</section>
+    <section id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-actions">
+                <button id="clear-cart" class="btn">Clear Cart</button>
+                <button id="checkout" class="btn primary">Checkout via WhatsApp</button>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Source Bazaar | Order via WhatsApp</p>
-</footer>
+    <section id="admin">
+        <div class="container">
+            <h2>Admin Panel</h2>
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="products">Manage Products</button>
+                <button class="tab-btn" data-tab="categories">Manage Categories</button>
+            </div>
+            
+            <div class="tab-content" id="products-tab">
+                <h3>Add New Product</h3>
+                <form id="product-form">
+                    <input type="text" id="product-name" placeholder="Product Name" required>
+                    <input type="text" id="product-price" placeholder="Price" required>
+                    <input type="text" id="product-category" placeholder="Category" required>
+                    <textarea id="product-description" placeholder="Description" required></textarea>
+                    <input type="text" id="product-image" placeholder="Image URL" required>
+                    <button type="submit" class="btn primary">Add Product</button>
+                </form>
+                
+                <h3>Existing Products</h3>
+                <div class="product-list" id="product-list">
+                    <!-- Products will be listed here -->
+                </div>
+            </div>
+            
+            <div class="tab-content" id="categories-tab">
+                <h3>Add New Category</h3>
+                <form id="category-form">
+                    <input type="text" id="category-name" placeholder="Category Name" required>
+                    <button type="submit" class="btn primary">Add Category</button>
+                </form>
+                
+                <h3>Existing Categories</h3>
+                <div class="category-list" id="category-list">
+                    <!-- Categories will be listed here -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MaxStock. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
