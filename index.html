@@ -2,42 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My E-Commerce Store</title>
+    <title>Source Bazaar | Online Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>My Online Store</h1>
-    <p>Order directly via WhatsApp</p>
+    <h1>Source Bazaar</h1>
+    <p>Quality Watches & Leather Products</p>
+    <p class="urdu">اعلیٰ معیار کی مصنوعات – واٹس ایپ پر آرڈر کریں</p>
 </header>
 
-<section class="products">
-    <div class="product">
-        <h2>Product 1</h2>
-        <p class="price">Rs. 1500</p>
-        <button onclick="addToCart('Product 1',1500)">Add to Cart</button>
-    </div>
+<nav>
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('watch')">Watches</button>
+    <button onclick="filterCategory('leather')">Leather</button>
+</nav>
 
-    <div class="product">
-        <h2>Product 2</h2>
-        <p class="price">Rs. 2500</p>
-        <button onclick="addToCart('Product 2',2500)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <h2>Product 3</h2>
-        <p class="price">Rs. 3500</p>
-        <button onclick="addToCart('Product 3',3500)">Add to Cart</button>
-    </div>
-</section>
+<section class="products" id="productList"></section>
 
 <section class="cart">
-    <h2>Your Cart</h2>
+    <h2>🛒 Your Cart</h2>
     <ul id="cartItems"></ul>
     <p id="total"></p>
-    <button onclick="checkout()">Buy on WhatsApp</button>
+    <button class="checkout" onclick="checkout()">Order on WhatsApp</button>
 </section>
+
+<footer>
+    <p>© 2026 Source Bazaar | Order via WhatsApp</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
