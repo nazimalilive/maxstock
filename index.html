@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Online Store</h1>
+    <p>Order directly via WhatsApp</p>
+</header>
+
+<section class="products">
+    <div class="product">
+        <h2>Product 1</h2>
+        <p class="price">Rs. 1500</p>
+        <button onclick="addToCart('Product 1',1500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Product 2</h2>
+        <p class="price">Rs. 2500</p>
+        <button onclick="addToCart('Product 2',2500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Product 3</h2>
+        <p class="price">Rs. 3500</p>
+        <button onclick="addToCart('Product 3',3500)">Add to Cart</button>
+    </div>
+</section>
+
+<section class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="total"></p>
+    <button onclick="checkout()">Buy on WhatsApp</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
